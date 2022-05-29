@@ -16,13 +16,13 @@ Putting aside some minor details on json parsing, let us outline major strategie
 
 1. As was already mentioned, we applied the bag-of-words strucutre, i.e. - each item was assumed to be a document that contained certain words, describing the nature of it. Obviousely, unlike human generated bodies of text, in our case the order of the words does not matter, which makes the choice of bag of words approach natural. We generated a binary DTM (document term matrix) - since the frequencies of words in our pseudo documents do not give any meaningful information. The tf-idf was tried but based on the results of the model, the factoring of document size turns out to be unnecessary for this type of problem. 
 2. Before describing the training of the model let's understand how the bag of words was cleaned (done by my function krasavchik()):
-        1. all words connected to the item got dumped into one list
+        1. all words connected to the item got dumped into one string (document)
         2. they were tokenized, lemmatized, the stopwords and verbs were removed (i.e. in user query we do not care of such words as 'i need', 'i want'...)
         3. Punctuation and numbers as well (yes, we lose some info on items but this info would be meaningless in terms of the user query, see above)
         4. some other minor cleaning has been done...
 
 3. And bag of words generated: given the item documents lack ANY DESCRIPTIONS of the products - we had to be creative to broaden the corpa for efective training:
-I have written the synomizer() function that finds the syninyms to all words in corpa (except brand names) - not to have the dtm exploded we have set the max_n_synonyms=3 for each word.
+I have written the synomizer() function that finds the syninyms to all words in corpa - nlrk-wordnet (except the brand names) - not to have the dtm size explod we have set the max_n_synonyms=3 for each word.
 
 
 ### Model training 
