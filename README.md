@@ -7,7 +7,7 @@ The objective was to come up with an efficient recomindation algorithm that woul
 
 ## Our approach:
 
-Instead of naivelly iterating through the database, trying to (fuzzy) match each term in the user's query to the items, than somehow figuring out how to assign the weights to the predictions based on the term distances - leading to a rather ineficient algorithm with the complexity of atleast O(n^m), I have decided to combine machine learning, in particular - classifier trained on the bag-of-words, with fuzzy matching and conventional NLP preprocessing (tokenization, lemmatization, removal of verbs, etc.) that yielded rather fast, stable to the variation in useer-query length and in size of the database, accurate recomindation algorithm. 
+Instead of naivelly iterating through the database, trying to (fuzzy) match each term in the user's query to the items, then somehow figuring out how to assign the weights to the predictions based on the term distances - leading to a rather ineficient algorithm with the complexity of atleast O(n^m), I have decided to combine machine learning, in particular - classifier trained on the bag-of-words, with fuzzy matching and conventional NLP preprocessing (tokenization, lemmatization, removal of verbs, etc.) that yielded rather fast, stable to the variation in useer-query length and in size of the database, accurate recomindation algorithm. 
 
 
 ## What has been done:
