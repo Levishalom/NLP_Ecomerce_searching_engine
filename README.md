@@ -27,7 +27,7 @@ I have written the synomizer() function that finds the syninyms to all words in 
 
 ### Model training 
 
-At this point the dtm is ready for trainig of a simple Multinomial Naive Bayes classifier (this model is nutoriuosly effective with the bag of words problems), whose sole purpose would be to output probabilities for each document given a certain user input. We also have the certanty_thresh=0.9 - which is a "credible region" of the recomindations - we say that we only want to see the recomindations that have the matching probability grater than 
+At this point the dtm is ready to be applied in trainig of a simple Multinomial Naive Bayes classifier (this model is nutoriuosly effective with the bag of words problems), whose sole purpose would be to output probabilities for each document given a certain user input.
 
 
 ### Final (fuzzy) matching and algorithm performance
