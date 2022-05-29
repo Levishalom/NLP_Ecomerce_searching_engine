@@ -1,4 +1,4 @@
-# NLP E-comerce searching engine
+# NLP e-comerce searching engine
 
 This project is my take on the following challenge: https://github.com/Lhotse-Technologies/take-home-data-scientist (read the description in the repository).
 
@@ -26,8 +26,9 @@ At this point the dtm is ready for trainig of a simple Multinomial Naive Bayes c
 
 ### Final matching and algorithm performance
 
-All of the steps before 
+All of the steps before are only done once (for every expansion of database). The last step - an algorithm that would match the user inputs with the dtm features (teerms) and output the probablistic recomidations based on the model and query. 
 
+Firstly, we would apply the same cleaning and prep process - krasavchik() function - on user query - hence dramatically dropping the number of words, leaving only the most essential: context-creating terms. Then, 
 
 ## Our repository:
 1. data.json - the raw json file provided in the challenge - the data
