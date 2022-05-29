@@ -1,4 +1,4 @@
-# E-comerce searching engine using NLP
+# E-comerce searching engine - NLP
 
 This project is my take on the following challenge: https://github.com/Lhotse-Technologies/take-home-data-scientist (read the description in the repository).
 
