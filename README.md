@@ -51,6 +51,6 @@ You can set certanty_thresh to None if ypu want to load just the top 1 recomenda
 3. You can also find prepaired for workflow-schedualing python scripts (each of them does a certain task - all of which can be found in the notebook):
     1. fcool_unctions.py - this is a file with the ready-to-go corpa cleaning function (krasavchik) - this file is imported in get_corpus.py and final_match.py 
     2. get_corpus.py - this script's input is the data.json, it is parsed, transformed to necessary df strucuture. the krasavchik() function is applied, synonyms generated, and the dtm constructed. The script outputs two csvs: dtm.csv and manufacturers.csv - a cleaned catalog of manufacturers that is going to be used in the final script. (neither of the csvs are loaded in this repository due to teir sizes).
-    3. train_model.py - here we train the classifier based on the dtm.csv -> the pickled model mini_model.sav is the output.
+    3. train_model.py - here we train the classifier based on the dtm.csv -> the pickled model mini_model.sav is the output - which is also rather havey to be added in the repository (feek free to recreate the model by running the all_in_one.ipynb).
     4. final_match.py - the final query matching function that inputs the user query - the mini_model.sav is imported for matching
     5. train_model.py - the script for testing the algorithm's performance - you can ran this in the terminal after running all the other files - it has the user input functionality
